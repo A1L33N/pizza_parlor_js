@@ -7,6 +7,23 @@ describe('Order', function() {
     expect(testOrder.address).to.equal("");
     expect(testOrder.pizzas).to.eql([]);
   });
+
+  it('calculates the total cost of an order', function (){
+    var testOrder = new Order('The Ninja Turtles','delivery', 123456789)
+    var testPizza1 = new Pizza('medium', 'gluten-free');
+    var pizzaToppings = ['mushrooms', 'extra cheese', 'pepperoni'];
+    pizzaToppings.forEach(function(topping) {
+      testPizza1.toppings.push(topping);
+    });
+    var testPizza2 = new Pizza('large', 'thin');
+    var pizzaToppings2 = ['mushrooms', 'pepperoni'];
+    pizzaToppings2.forEach(function(topping) {
+      testPizza2.toppings.push(topping);
+    });
+    testOrder.pizzas.push(testPizza1);
+    testOrder.pizzas.push(testPizza2);
+    expect(testOrder.totalCost()).to.equal(28);
+  });
 });
 
 describe('Pizza', function() {
@@ -27,6 +44,17 @@ describe('Pizza', function() {
     pizzaToppings.forEach(function(topping) {
       testPizza.toppings.push(topping);
     });
+    // expect(testPizza.cost).to.equal(12.50); <---- why doesn't this work?? no longer includes toppings in cost
     expect(testPizza.pizzaCost()).to.equal(12.50);
+    var testPizza2 = new Pizza('large', 'thin');
+    var pizzaToppings2 = ['mushrooms', 'pepperoni'];
+    pizzaToppings2.forEach(function(topping) {
+      testPizza2.toppings.push(topping);
+    });
+
+    expect(testPizza2.pizzaCost()).to.equal(13.00);
   });
+
+
+
 });

@@ -6,14 +6,32 @@ function Order(orderName, orderType, phone) {
   this.pizzas = [];
 }
 
+Order.prototype.totalCost = function() {
+  var totalCost = 0;
+debugger;
+  if (this.orderType === "delivery") {
+    totalCost += 2.50;
+  }
+
+  this.pizzas.forEach(function(pizza) {
+    totalCost += pizza.pizzaCost();
+  });
+  return totalCost;
+}
+
 function Pizza(pizzaSize, crustType) {
   this.pizzaSize = pizzaSize;
   this.crustType = crustType;
   this.toppings = [];
+  // this.cost = this.pizzaCost(); <---- will no longer include toppings in total cost??
 }
 
 Pizza.prototype.pizzaCost = function() {
   var cost = 8;
+  debugger;
+  this.toppings.forEach(function(topping) {
+    cost += 0.5;
+  });
 
   if (this.pizzaSize === "medium") {
     cost += 2;
@@ -22,12 +40,9 @@ Pizza.prototype.pizzaCost = function() {
     cost += 4;
   }
 
-  if (this.crustType === "gluten-free" || "stuffed") {
+  if ((this.crustType === "gluten-free") || (this.crustType ==="stuffed")) {
     cost += 1;
   }
 
-  this.toppings.forEach(function(topping) {
-    cost += .5;
-  });
   return cost;
 };
