@@ -23,6 +23,13 @@ describe('Order', function() {
     testOrder.pizzas.push(testPizza1);
     testOrder.pizzas.push(testPizza2);
     expect(testOrder.totalCost()).to.equal(28);
+    var testOrder2 = new Order('The Ninja Turtles','pick-up', 123456789)
+    var testPizza3 = new Pizza('medium', 'gluten-free');
+    var pizzaToppings3 = ['mushrooms', 'extra cheese', 'pepperoni'];
+    pizzaToppings3.forEach(function(topping) {
+      testPizza3.toppings.push(topping);
+    });
+
   });
 });
 

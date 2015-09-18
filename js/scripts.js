@@ -8,7 +8,6 @@ function Order(orderName, orderType, phone) {
 
 Order.prototype.totalCost = function() {
   var totalCost = 0;
-debugger;
   if (this.orderType === "delivery") {
     totalCost += 2.50;
   }
@@ -28,7 +27,6 @@ function Pizza(pizzaSize, crustType) {
 
 Pizza.prototype.pizzaCost = function() {
   var cost = 8;
-  debugger;
   this.toppings.forEach(function(topping) {
     cost += 0.5;
   });
@@ -46,3 +44,38 @@ Pizza.prototype.pizzaCost = function() {
 
   return cost;
 };
+
+$(document).ready(function() {
+  $('form#order-form').submit(function(event) {
+    event.preventDefault();
+
+  var name = $('#order-name').val();
+  var phone = $('#phone').val();
+  var orderType = $('select').val();
+
+  var newOrder = new Order(name, orderType, phone);
+  console.log(newOrder);
+  $('form#order-form').hide();
+  if (orderType === "pick-up") {
+    $("#build-pizza-form").show();
+  } else {
+    $('#address-form').show();
+  }
+
+  $('form#add-address').submit(function(event) {
+    event.preventDefault();
+    var street = $('#street-name').val();
+    var city = $('#city').val();
+    var state = $('select#state').val();
+    var address = street + city + ", " + state;
+
+    newOrder.address = address
+    $('#address-form').hide();
+    $("#build-pizza-form").show();
+    console.log(newOrder)
+  });
+
+  });
+
+
+});

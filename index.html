@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PDX Pizza Pies</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/scripts.js"></script>
+  </head>
+  <body>
+    <div class="container">
+    <h1>Welcome to PPP!</h1>
+
+    <!-- start order form -->
+      <div class="pizza-order-form">
+        <h2>Ready for some noms? Start your order:</h2>
+        <form id="order-form">
+          <div class="form-group">
+            <label for="order-name">Enter your name:</label>
+            <input type="text" name="order-name" id="order-name">
+          </div>
+          <div class="form-group">
+            <label for="phone">Enter your phone number:</label>
+            <input type="text" name="phone" id="phone">
+          </div>
+          <div class="form-group">
+            <label for="order-type">Pick-up Or Delivery?</label>
+            <select class="form-control">
+              <option id="pick-up-order" value="pick-up">Pick-up</option>
+              <option id="delivery-order" value="delivery">Delivery (Delivery fee is $2.50)</option>
+            </select>
+          </div>
+          <button type="submit" name="new-order" id="new-order">Go!</button>
+        </form>
+
+        <!-- add address for delivery form -->
+
+
+        <div id="address-form">
+          <form id="add-address">
+            <div class="form-group">
+              <p>Delivery info:</p>
+              <label for="street-name">Enter your street address:</label>
+              <input type="text" name="street-name" id="street-name">
+            </div>
+            <div class="form-group">
+              <label for="city">City:</label>
+              <input type="text" name="city" id="city">
+            </div>
+            <div class="form-group">
+              <label for="state">State:</label>
+              <select id="state">
+              	<option value="AL">Alabama</option>
+              	<option value="AK">Alaska</option>
+              	<option value="AZ">Arizona</option>
+              	<option value="AR">Arkansas</option>
+              	<option value="CA">California</option>
+              	<option value="CO">Colorado</option>
+              	<option value="CT">Connecticut</option>
+              	<option value="DE">Delaware</option>
+              	<option value="DC">District Of Columbia</option>
+              	<option value="FL">Florida</option>
+              	<option value="GA">Georgia</option>
+              	<option value="HI">Hawaii</option>
+              	<option value="ID">Idaho</option>
+              	<option value="IL">Illinois</option>
+              	<option value="IN">Indiana</option>
+              	<option value="IA">Iowa</option>
+              	<option value="KS">Kansas</option>
+              	<option value="KY">Kentucky</option>
+              	<option value="LA">Louisiana</option>
+              	<option value="ME">Maine</option>
+              	<option value="MD">Maryland</option>
+              	<option value="MA">Massachusetts</option>
+              	<option value="MI">Michigan</option>
+              	<option value="MN">Minnesota</option>
+              	<option value="MS">Mississippi</option>
+              	<option value="MO">Missouri</option>
+              	<option value="MT">Montana</option>
+              	<option value="NE">Nebraska</option>
+              	<option value="NV">Nevada</option>
+              	<option value="NH">New Hampshire</option>
+              	<option value="NJ">New Jersey</option>
+              	<option value="NM">New Mexico</option>
+              	<option value="NY">New York</option>
+              	<option value="NC">North Carolina</option>
+              	<option value="ND">North Dakota</option>
+              	<option value="OH">Ohio</option>
+              	<option value="OK">Oklahoma</option>
+              	<option value="OR">Oregon</option>
+              	<option value="PA">Pennsylvania</option>
+              	<option value="RI">Rhode Island</option>
+              	<option value="SC">South Carolina</option>
+              	<option value="SD">South Dakota</option>
+              	<option value="TN">Tennessee</option>
+              	<option value="TX">Texas</option>
+              	<option value="UT">Utah</option>
+              	<option value="VT">Vermont</option>
+              	<option value="VA">Virginia</option>
+              	<option value="WA">Washington</option>
+              	<option value="WV">West Virginia</option>
+              	<option value="WI">Wisconsin</option>
+              	<option value="WY">Wyoming</option>
+              </select>
+            </div>
+            <button type="submit" name="add-address">Next</button>
+          </form>
+        </div>
+
+      </div>
+      <!-- add multiple pizza form -->
+      <div id="build-pizza-form">
+        <!-- individual pizza form -->
+        <div class="build-pizza">
+          <div class="form-group" id="pizza-size">
+            <label for="pizza-size">Select a pizza size</label>
+            <select class="form-control">
+              <option id="small" value="small">Small (10 inch pie) - $8.00</option>
+              <option id="medium" value="medium">Medium (12 inch pie) - $10.00 </option>
+              <option id="large" value="large">Large (15 inch pie) - $12.00 </option>
+            </select>
+          </div>
+
+          <div class="form-group" id="pizza-crust">
+            <label for="pizza-size">Select a pizza size</label>
+            <select class="form-control">
+              <option value="thin">Thin</option>
+              <option value="pan">Pan</option>
+              <option value="hand-tossed">Hand-Tossed</option>
+              <option value="deep-dish">Deep Dish</option>
+              <option value="stuffed">Cheesy Stuffed Crust (add $1.00)</option>
+              <option value="gluten-free">Gluten-Free (add $1.00)</option>
+            </select>
+          </div>
+
+          <div class="form-group" id="toppings">
+          <h3>Select Your Pizza Toppings: (All pizzas include cheese and our scratch made tomato sauce.)</h3>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="extra-cheese">
+                Extra Cheese
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="extra-sauce">
+                Extra Sauce
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="pepperoni">
+                Pepperoni
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="ham">
+                Ham
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="sausage">
+                Sausage
+              </label>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
