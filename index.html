@@ -10,11 +10,11 @@
   </head>
   <body>
     <div class="container">
-    <h1>Welcome to PPP!</h1>
+    <h1>PDX Pizza Pies</h1>
 
     <!-- start order form -->
       <div class="pizza-order-form">
-        <h2>Ready for some noms? Start your order:</h2>
+        <h2 class="ready">Ready for some noms? Start your order:</h2>
         <form id="order-form">
           <div class="form-group">
             <label for="order-name">Enter your name:</label>
@@ -40,7 +40,7 @@
         <div id="address-form">
           <form id="add-address">
             <div class="form-group">
-              <p>Delivery info:</p>
+              <h3>Delivery info:</h3>
               <label for="street-name">Enter your street address:</label>
               <input type="text" name="street-name" id="street-name">
             </div>
@@ -241,7 +241,8 @@
           <span class="toppings"></span>
           <span class"cost"></span>
         </ul>
-        <p>Your Total Cost:</p>
+        <h4>Order Type: <span class='delivery-or-pickup'></span></h4>
+        <h3>Your Total Cost:</h3>
           <span class="total-cost"></span>
       </div>
     </div>
