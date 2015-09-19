@@ -2,6 +2,10 @@
   display: none;
 }
 
-#build-pizza-form {
+#pizza-form {
   display: none;
+}
+
+.order-total {
+  display:none; 
 }
