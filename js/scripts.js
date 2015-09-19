@@ -45,23 +45,16 @@ Pizza.prototype.pizzaCost = function() {
   return cost;
 };
 
-function getPizzaToppings() {
-  var array = [];
-  var checked = $(this).find(':checkbox:checked');
-  checked.each(function(){
-    var topping = $(this).val();
-    array.push(topping);
-  });
-  return array;
-};
-
-// function resetPizzaForm() {
-//   $('#size').val("");
-//   $('#crust').val("");
-//   $(".checkbox").each(function(checkbox){
-//     $(this).removeAttr('checked');
+// function getPizzaToppings() {
+//   var array = [];
+//   var checked = $(this).find(':checkbox:checked');
+//   checked.each(function(){
+//     var topping = $(this).val();
+//     array.push(topping);
 //   });
+//   return array;
 // };
+
 
 $(document).ready(function() {
   $('form#order-form').submit(function(event) {
@@ -237,9 +230,7 @@ $(document).ready(function() {
 
     });
 
-
   console.log(newOrder);
-
 
     newOrder.pizzas.forEach(function(pizza) {
       $('ul#pizza-info').append("<li>" + pizza.pizzaSize  + " pizza, " +
@@ -253,8 +244,6 @@ $(document).ready(function() {
     // resetPizzaForm();
   });
 
-
   });
-
 
 });
