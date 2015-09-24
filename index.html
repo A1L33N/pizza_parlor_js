@@ -4,111 +4,141 @@
   <head>
     <title>PDX Pizza Pies</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/landing-page.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Sigmar+One|Voltaire|Russo+One|Permanent+Marker|Economica:400,700|Days+One|Walter+Turncoat' rel='stylesheet' type='text/css'>
     <script src="js/jquery-1.11.3.js"></script>
     <script src="js/scripts.js"></script>
   </head>
   <body>
-    <div class="container">
-    <h1>PDX Pizza Pies</h1>
 
-    <!-- start order form -->
-      <div class="pizza-order-form">
-        <h2 class="ready">Ready for some noms? Start your order:</h2>
-        <form id="order-form">
-          <div class="form-group">
-            <label for="order-name">Enter your name:</label>
-            <input type="text" name="order-name" id="order-name">
-          </div>
-          <div class="form-group">
-            <label for="phone">Enter your phone number:</label>
-            <input type="text" name="phone" id="phone">
-          </div>
-          <div class="form-group">
-            <label for="order-type">Pick-up Or Delivery?</label>
-            <select class="form-control">
-              <option id="pick-up-order" value="pick-up">Pick-up</option>
-              <option id="delivery-order" value="delivery">Delivery (Delivery fee is $2.50)</option>
-            </select>
-          </div>
-          <button type="submit" name="new-order" id="new-order">Go!</button>
-        </form>
-
-        <!-- add address for delivery form -->
-
-
-        <div id="address-form">
-          <form id="add-address">
-            <div class="form-group">
-              <h3>Delivery info:</h3>
-              <label for="street-name">Enter your street address:</label>
-              <input type="text" name="street-name" id="street-name">
-            </div>
-            <div class="form-group">
-              <label for="city">City:</label>
-              <input type="text" name="city" id="city">
-            </div>
-            <div class="form-group">
-              <label for="state">State:</label>
-              <select id="state">
-              	<option value="AL">Alabama</option>
-              	<option value="AK">Alaska</option>
-              	<option value="AZ">Arizona</option>
-              	<option value="AR">Arkansas</option>
-              	<option value="CA">California</option>
-              	<option value="CO">Colorado</option>
-              	<option value="CT">Connecticut</option>
-              	<option value="DE">Delaware</option>
-              	<option value="DC">District Of Columbia</option>
-              	<option value="FL">Florida</option>
-              	<option value="GA">Georgia</option>
-              	<option value="HI">Hawaii</option>
-              	<option value="ID">Idaho</option>
-              	<option value="IL">Illinois</option>
-              	<option value="IN">Indiana</option>
-              	<option value="IA">Iowa</option>
-              	<option value="KS">Kansas</option>
-              	<option value="KY">Kentucky</option>
-              	<option value="LA">Louisiana</option>
-              	<option value="ME">Maine</option>
-              	<option value="MD">Maryland</option>
-              	<option value="MA">Massachusetts</option>
-              	<option value="MI">Michigan</option>
-              	<option value="MN">Minnesota</option>
-              	<option value="MS">Mississippi</option>
-              	<option value="MO">Missouri</option>
-              	<option value="MT">Montana</option>
-              	<option value="NE">Nebraska</option>
-              	<option value="NV">Nevada</option>
-              	<option value="NH">New Hampshire</option>
-              	<option value="NJ">New Jersey</option>
-              	<option value="NM">New Mexico</option>
-              	<option value="NY">New York</option>
-              	<option value="NC">North Carolina</option>
-              	<option value="ND">North Dakota</option>
-              	<option value="OH">Ohio</option>
-              	<option value="OK">Oklahoma</option>
-              	<option value="OR">Oregon</option>
-              	<option value="PA">Pennsylvania</option>
-              	<option value="RI">Rhode Island</option>
-              	<option value="SC">South Carolina</option>
-              	<option value="SD">South Dakota</option>
-              	<option value="TN">Tennessee</option>
-              	<option value="TX">Texas</option>
-              	<option value="UT">Utah</option>
-              	<option value="VT">Vermont</option>
-              	<option value="VA">Virginia</option>
-              	<option value="WA">Washington</option>
-              	<option value="WV">West Virginia</option>
-              	<option value="WI">Wisconsin</option>
-              	<option value="WY">Wyoming</option>
-              </select>
-            </div>
-            <button type="submit" name="add-address">Next</button>
-          </form>
-        </div>
-
+<!-- Navigation -->
+  <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+    <div class="container topnav">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <a class="navbar-brand topnav" href="#">PDX Pizza Pies</a>
       </div>
+         <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+ </nav>
+ <div class="intro-header">
+   <div class="container">
+     <div class="row">
+
+        <h1>PDX Pizza Pies</h1>
+        <hr class="intro-divider"
+    <!-- start order form -->
+
+          <div class="pizza-order-form all-form">
+            <h2 class="ready">Ready for some noms? Start your order:</h2>
+            <form id="order-form">
+              <div class="form-group">
+                <label for="order-name">Enter your name:</label>
+                <input type="text" name="order-name" id="order-name" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="phone">Enter your phone number:</label>
+                <input type="text" name="phone" id="phone" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="order-type">Pick-up Or Delivery?</label>
+                <select class="form-control">
+                  <option id="pick-up-order" value="pick-up">Pick-up</option>
+                  <option id="delivery-order" value="delivery">Delivery (Delivery fee is $2.50)</option>
+                </select>
+              </div>
+              <button type="submit" name="new-order" id="new-order">Go!</button>
+            </form>
+
+            <!-- add address for delivery form -->
+
+
+            <div id="address-form">
+              <form id="add-address">
+                <div class="form-group">
+                  <h3>Delivery info:</h3>
+                  <label for="street-name">Enter your street address:</label>
+                  <input type="text" name="street-name" id="street-name">
+                </div>
+                <div class="form-group">
+                  <label for="city">City:</label>
+                  <input type="text" name="city" id="city">
+                </div>
+                <div class="form-group">
+                  <label for="state">State:</label>
+                  <select id="state">
+                  	<option value="AL">Alabama</option>
+                  	<option value="AK">Alaska</option>
+                  	<option value="AZ">Arizona</option>
+                  	<option value="AR">Arkansas</option>
+                  	<option value="CA">California</option>
+                  	<option value="CO">Colorado</option>
+                  	<option value="CT">Connecticut</option>
+                  	<option value="DE">Delaware</option>
+                  	<option value="DC">District Of Columbia</option>
+                  	<option value="FL">Florida</option>
+                  	<option value="GA">Georgia</option>
+                  	<option value="HI">Hawaii</option>
+                  	<option value="ID">Idaho</option>
+                  	<option value="IL">Illinois</option>
+                  	<option value="IN">Indiana</option>
+                  	<option value="IA">Iowa</option>
+                  	<option value="KS">Kansas</option>
+                  	<option value="KY">Kentucky</option>
+                  	<option value="LA">Louisiana</option>
+                  	<option value="ME">Maine</option>
+                  	<option value="MD">Maryland</option>
+                  	<option value="MA">Massachusetts</option>
+                  	<option value="MI">Michigan</option>
+                  	<option value="MN">Minnesota</option>
+                  	<option value="MS">Mississippi</option>
+                  	<option value="MO">Missouri</option>
+                  	<option value="MT">Montana</option>
+                  	<option value="NE">Nebraska</option>
+                  	<option value="NV">Nevada</option>
+                  	<option value="NH">New Hampshire</option>
+                  	<option value="NJ">New Jersey</option>
+                  	<option value="NM">New Mexico</option>
+                  	<option value="NY">New York</option>
+                  	<option value="NC">North Carolina</option>
+                  	<option value="ND">North Dakota</option>
+                  	<option value="OH">Ohio</option>
+                  	<option value="OK">Oklahoma</option>
+                  	<option value="OR">Oregon</option>
+                  	<option value="PA">Pennsylvania</option>
+                  	<option value="RI">Rhode Island</option>
+                  	<option value="SC">South Carolina</option>
+                  	<option value="SD">South Dakota</option>
+                  	<option value="TN">Tennessee</option>
+                  	<option value="TX">Texas</option>
+                  	<option value="UT">Utah</option>
+                  	<option value="VT">Vermont</option>
+                  	<option value="VA">Virginia</option>
+                  	<option value="WA">Washington</option>
+                  	<option value="WV">West Virginia</option>
+                  	<option value="WI">Wisconsin</option>
+                  	<option value="WY">Wyoming</option>
+                  </select>
+                </div>
+                <button type="submit" name="add-address">Next</button>
+              </form>
+            </div>
+
+          </div>
+
+
+
       <!-- add multiple pizza form -->
       <div id="build-your-pizzas">
         <form id="build-pizza-form">
@@ -244,6 +274,9 @@
         <h4>Order Type: <span class='delivery-or-pickup'></span></h4>
         <h3>Your Total Cost:</h3>
           <p>$<span class="total-cost"></span></p>
+      </div>
+    </div>
+
       </div>
     </div>
   </body>

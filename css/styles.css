@@ -1,3 +1,7 @@
+/*body {
+  padding-top: 60px;
+}*/
+
 #address-form {
   display: none;
 }
@@ -8,4 +12,18 @@
 
 .order-total {
   display:none;
+}
+
+.pizza-order-form {
+  width: 35%;
+  text-align: center;
+  margin: auto;
+}
+
+.all-form {
+  font-size: 20px;
+}
+
+button {
+  color: black;
 }
