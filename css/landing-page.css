@@ -38,9 +38,12 @@ h6 {
     padding-bottom: 50px;
     text-align: center;
     color: #f8f8f8;
-    background: url(https://unsplash.it/1280/1080?image=210) no-repeat center center;
+    background: url(https://unsplash.it/1280/1080?image=210) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    height: 100%;
+    min-height: 100%;
     font-family: 'Economica', sans-serif;
 }
 

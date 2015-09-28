@@ -22,8 +22,18 @@
 
 .all-form {
   font-size: 20px;
+  color: #777;
+  /*background-color: white;*/
+  padding: 50px;
+  background:#7f7f7f;
+  background:rgba(255,255,255,0.7);
 }
 
 button {
   color: black;
+}
+
+ul  {
+  list-style-type: none;
+
 }
